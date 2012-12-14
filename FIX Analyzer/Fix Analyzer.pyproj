@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e659416d-d841-498c-b1f6-0178026d90bb}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>C:\Users\kharper\Documents\FIX Analyzer\FIX Analyzer\MainWindow.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <InterpreterId>fcc291aa-427c-498c-a4d7-4502d6449b8c</InterpreterId>
+    <LaunchProvider>IronPython (.NET) launcher</LaunchProvider>
+    <InterpreterVersion>2.7</InterpreterVersion>
+    <AssemblyName>ValidFIX</AssemblyName>
+    <Name>Fix Analyzer</Name>
+    <RootNamespace>ValidFIX</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="MainWindow.py" />
+    <None Include="MainWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FixParser.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="quickfix_net, Version=1.0.3756.19563, Culture=neutral, PublicKeyToken=null">
+      <Name>quickfix_net</Name>
+      <AssemblyName>quickfix_net.dll</AssemblyName>
+      <HintPath>C:\lib\ExternalLibraries\quickfix_net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FixDict.xml" />
+  </ItemGroup>
+</Project>

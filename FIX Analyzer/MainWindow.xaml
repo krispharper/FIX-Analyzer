@@ -1,0 +1,15 @@
+﻿<Window 
+		   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		   Title="FIX Analyzer" Height="1000" Width="693" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" WindowStartupLocation="CenterScreen">
+	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="5">
+		<StackPanel x:Name="stack" FocusManager.FocusedElement="{Binding ElementName=text_box}">
+			<TextBox x:Name="text_box" Height="200" Width="Auto" VerticalAlignment="Top" FontFamily="Consolas" AcceptsReturn="True" AcceptsTab="True" TextChanged="TextBox_TextChanged" TabIndex="0" />
+		</StackPanel>
+	</ScrollViewer>
+	<Window.ContextMenu>
+		<ContextMenu>
+			<MenuItem Header="Quit" Click="QuitMenuItem_Click" />
+		</ContextMenu>
+	</Window.ContextMenu>
+</Window> 
